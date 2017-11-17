@@ -10,6 +10,20 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="ServiceStack.Client.core" Version="1.0.44" />
+    <PackageReference Include="servicestack.Common.Core" Version="1.0.44" />
+    <PackageReference Include="servicestack.core" Version="1.0.44" />
+    <PackageReference Include="ServiceStack.HttpClient.Core" Version="1.0.44" />
+    <PackageReference Include="servicestack.OrmLite.Core" Version="1.0.44" />
+    <PackageReference Include="servicestack.OrmLite.SqlServer.Core" Version="1.0.44" />
+    <PackageReference Include="servicestack.Redis.Core" Version="1.0.44" />
+    <PackageReference Include="servicestack.server.core" Version="1.0.44" />
+    <PackageReference Include="servicestack.Text.Core" Version="1.0.44" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Api.ServiceInterface\Api.ServiceInterface.csproj" />
+    <ProjectReference Include="..\Api.ServiceModel\Api.ServiceModel.csproj" />
   </ItemGroup>
 
 </Project>
