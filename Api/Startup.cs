@@ -12,14 +12,19 @@ using ServiceStack;
 
 namespace Api
 {
+    using Api.ServiceModel.Setting;
+
     public class Startup
     {
-//        public Startup(IHostingEnvironment env)
-//        {
-//            var builder = new ConfigurationBuilder().SetBasePath(env.ContentRootPath)
-//                .AddJsonFile("appsetting.json", true, true);
-//            var configRoot = builder.Build();
-//        }
+        private AppSettings Settings { get; set; }
+
+        public Startup(IHostingEnvironment env)
+        {
+            var builder = new ConfigurationBuilder().SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", true, true);
+            var configRoot = builder.Build();
+            this.Settings = configRoot.Get<AppSettings>();
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
