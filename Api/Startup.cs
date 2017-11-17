@@ -16,14 +16,14 @@ namespace Api
 
     public class Startup
     {
-        private AppSettings Settings { get; set; }
+        private AppSettings settings { get; set; }
 
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder().SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", true, true);
             var configRoot = builder.Build();
-            this.Settings = configRoot.Get<AppSettings>();
+            this.settings = configRoot.Get<AppSettings>();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -42,7 +42,7 @@ namespace Api
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseServiceStack(new AppHost());
+            app.UseServiceStack(new AppHost(this.settings));
 
             app.Run(context =>
             {

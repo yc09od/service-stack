@@ -21,9 +21,9 @@ namespace Api.ServiceInterface.Services
 
             var client = new JsonServiceClient(baseUrl);
 
-            var r = new HelloRequest { Name = "test" };
+            var setting = this.settings;
 
-            var result = client.Get(r);
+            var result = client.Get(new HelloRequest { Name = "test" });
 
             return result;
         }
