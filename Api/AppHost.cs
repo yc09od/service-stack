@@ -13,7 +13,8 @@ namespace Api
     {
         public AppHost() : base("Api", typeof(HelloService).GetAssembly())
         {
-            AppSettings = new MultiAppSettings(new EnvironmentVariableSettings(), new AppSettings());
+            var settings = new AppSettings();
+            AppSettings = new MultiAppSettings(new EnvironmentVariableSettings(), settings);
         }
 
         public override void Configure(Container container)

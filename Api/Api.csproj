@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
     <PackageReference Include="ServiceStack.Client.core" Version="1.0.44" />
     <PackageReference Include="servicestack.Common.Core" Version="1.0.44" />
