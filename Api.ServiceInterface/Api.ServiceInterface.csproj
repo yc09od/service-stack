@@ -20,4 +20,8 @@
     <ProjectReference Include="..\Api.ServiceModel\Api.ServiceModel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\Auth\" />
+  </ItemGroup>
+
 </Project>

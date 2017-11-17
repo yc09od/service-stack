@@ -8,11 +8,13 @@ namespace Api.ServiceModel.Requests
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
 
+    using Api.ServiceModel.Responses;
+
     /// <summary>
     /// Hello request
     /// </summary>
-    [Route("/hello/{Name}", Verbs = "Get"), Description("This is the test service")]
-    public class HelloRequest
+    [Route("/hello/{Name}", Verbs = "GET"), Description("This is the test service")]
+    public class HelloRequest : IReturn<HelloResponse>
     {
         /// <summary>
         /// Gets or sets the name of hello

@@ -19,7 +19,7 @@ namespace Api
 
         public override void Configure(Container container)
         {
-            
+            this.Plugins.Add(new CorsFeature());
         }
     }
 }
